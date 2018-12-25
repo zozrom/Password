@@ -5,22 +5,31 @@ using namespace std;
 bool password();
 int main()
 {
+	// Password : programming 
 	if (password())
 	{
+		cout << "Congratulation!";
 
 	}
-	// Password : programming 
+	else
+	{
+		cout << "Wrong password!";
+	}
+	
 	return 0; 
 }
 bool password()
 {
+	int x;
+	int m = 3;
 	for (int  i = 0; i < 3; i++)
 	{
-		int x,v=3;
+		
 		char array[50];
 		do
 		{
-			cout << "You have " << v << " attempt" << " enter the password :";
+			cout << "You have " << m << " attempt" << " enter the password :";
+			
 			gets_s(array);
 			strlen(array);//Numbers of digitals
 			x = strlen(array);
@@ -35,6 +44,7 @@ bool password()
 			cout << "Invalid password!";
 			cout << endl;
 		}
+		--m;
 	}
 	return false;
 }
